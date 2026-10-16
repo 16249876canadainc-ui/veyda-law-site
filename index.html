@@ -43,13 +43,14 @@ h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.08;margin:0;te
 .btn-royal:hover{background:var(--royal-deep)}
 
 /* Opening banner: slim, dark, gold small caps between hairlines */
-.banner{background:#000;color:var(--gold-soft);border-bottom:1px solid rgba(200,160,74,.35)}
+.banner{background:var(--gold);color:#0B0B0B;border-bottom:1px solid #A9853A}
 .banner .wrap{display:flex;justify-content:center;align-items:center;gap:16px;padding-block:11px;text-align:center}
-.banner .rule{flex:0 1 70px;height:1px;background:linear-gradient(90deg,transparent,var(--gold))}
-.banner .rule.r{background:linear-gradient(90deg,var(--gold),transparent)}
+.banner .rule{flex:0 1 70px;height:1px;background:linear-gradient(90deg,transparent,#0B0B0B)}
+.banner .rule.r{background:linear-gradient(90deg,#0B0B0B,transparent)}
 .banner p{margin:0;font:500 12px/1.4 var(--body);letter-spacing:.2em;text-transform:uppercase}
-.banner b{color:var(--gold);font-weight:600}
-.banner a{color:#fff;text-decoration:none;border-bottom:1px solid var(--gold);margin-left:6px}
+.banner b{font-weight:700}
+.banner .sep{margin:0 4px}
+.banner a{color:#0B0B0B;font-weight:700;text-decoration:none;border-bottom:1px solid #0B0B0B;margin-left:6px}
 
 /* Nav: same navy as hero so the brand sits on one continuous field */
 header.nav{background:var(--royal-deep);position:sticky;top:env(safe-area-inset-top, 0px);z-index:20;border-bottom:1px solid rgba(255,255,255,.08)}
@@ -206,7 +207,7 @@ footer .legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.12);paddin
 <body>
 
 
-<div class="banner"><div class="wrap"><span class="rule" aria-hidden="true"></span><p><b>Opening January 2027</b> · 2524 Ellwood Drive SW <a href="#office">Learn more</a></p><span class="rule r" aria-hidden="true"></span></div></div>
+<div class="banner"><div class="wrap"><span class="rule" aria-hidden="true"></span><p><b>Opening January 2027</b> · 2524 Ellwood Drive SW <span class="sep">·</span> <a href="mailto:tina@veydalaw.ca?subject=Joining%20Veyda%20Law">Lawyers: join our team</a></p><span class="rule r" aria-hidden="true"></span></div></div>
 
 <header class="nav">
   <div class="wrap">
@@ -326,26 +327,6 @@ footer .legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.12);paddin
     </div>
   </section>
 
-  <section id="join" class="tint">
-    <div class="wrap split">
-      <div>
-        <div class="eyebrow">For lawyers</div>
-        <h2 class="big">Join Veyda Law.</h2>
-        <p class="lead">Build your practice under the Veyda Law name, with the independence of your own professional corporation. We are growing into our new Ellwood Drive office in January 2027 and have room for lawyers who share our approach: practical, responsive, and plain-spoken with clients.</p>
-        <div class="join-cta">
-          <a class="btn btn-royal" href="mailto:tina@veydalaw.ca?subject=Joining%20Veyda%20Law">Start a conversation</a>
-          <p>Or email <strong>tina@veydalaw.ca</strong> with the subject line “Joining Veyda Law.” All inquiries are kept confidential.</p>
-        </div>
-      </div>
-      <ul class="perks">
-        <li><h3>Your practice, your corporation</h3><p>Keep your own professional corporation, clients and billing, backed by an established firm name.</p></li>
-        <li><h3>A shared front desk</h3><p>Inquiries are answered and consultations booked straight into your calendar, based on the hours you set.</p></li>
-        <li><h3>Boardroom and meeting space</h3><p>A bookable boardroom at the new office, so client meetings never double-book.</p></li>
-        <li><h3>Colleagues across practice areas</h3><p>Family, civil, real estate, estates, corporate and criminal, with easy referrals under one roof.</p></li>
-      </ul>
-    </div>
-  </section>
-
   <section id="contact" class="contact dark">
     <div class="wrap">
       <div class="eyebrow">Get in touch</div>
@@ -367,7 +348,7 @@ footer .legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.12);paddin
       <p style="max-width:28em;margin:18px 0 0">Strategic representation for the people and businesses of Alberta.</p>
     </div>
     <div><h4>Practice areas</h4><ul><li>Family Law</li><li>Civil Litigation</li><li>Real Estate</li><li>Wills &amp; Estates</li><li>Corporate &amp; Commercial</li><li>Criminal Defence</li></ul></div>
-    <div><h4>Contact</h4><ul><li>(825) 333-8462</li><li>tina@veydalaw.ca</li><li>Southwest Edmonton, by appointment</li><li>New office: 2524 Ellwood Drive SW (January 2027)</li><li><a href="#join" style="color:var(--gold-soft)">Lawyers: join Veyda Law</a></li></ul></div>
+    <div><h4>Contact</h4><ul><li>(825) 333-8462</li><li>tina@veydalaw.ca</li><li>Southwest Edmonton, by appointment</li><li>New office: 2524 Ellwood Drive SW (January 2027)</li><li><a href="mailto:tina@veydalaw.ca?subject=Joining%20Veyda%20Law" style="color:var(--gold-soft)">Lawyers: join our team</a></li></ul></div>
     <div class="legal">© 2026 Veyda Law. Information on this site is general and is not legal advice. Contacting Veyda Law does not create a lawyer-client relationship.</div>
   </div>
 </footer>
