@@ -6,9 +6,20 @@
 <title>Veyda Law</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <meta name="description" content="Veyda Law — strategic representation in family, civil, real estate, wills & estates, corporate and criminal law. Southwest Edmonton, Alberta. Free first consultation.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://veydalaw.ca/">
+<meta property="og:title" content="Veyda Law · Edmonton Lawyers">
+<meta property="og:description" content="Family, civil, real estate, wills & estates, corporate and criminal law. Free first consultation.">
+<meta property="og:image" content="https://veydalaw.ca/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://veydalaw.ca/og-image.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Figtree:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Figtree:wght@400;500;600&family=Oswald:wght@500;600;700&display=swap">
 <style>
 /* Layout: royal-blue hero with a gold-ruled consult card, then a white editorial column with
    practice areas in a 3-up grid, founder profile, new-office band, contact. */
@@ -23,6 +34,7 @@
   --mist:#F4F3F0;       /* section tint, neutral */
   --line:#E4E0D6;
   --display:"Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --sign:"Oswald", "Arial Narrow", Arial, sans-serif;
   --body:"Figtree", "Helvetica Neue", Arial, sans-serif;
   color-scheme: light;
 }
@@ -49,8 +61,9 @@ h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.08;margin:0;te
 .banner .rule.r{background:linear-gradient(90deg,#0B0B0B,transparent)}
 .banner p{margin:0;font:500 12px/1.4 var(--body);letter-spacing:.2em;text-transform:uppercase}
 .banner b{font-weight:700}
-.banner .sep{margin:0 4px}
-.banner a{color:#0B0B0B;font-weight:700;text-decoration:none;border-bottom:1px solid #0B0B0B;margin-left:6px}
+.banner .btext{display:grid;gap:5px}
+.banner .bjoin{font-size:11px}
+.banner a{color:#0B0B0B;font-weight:700;text-decoration:none;border-bottom:1px solid #0B0B0B}
 
 /* Nav: same navy as hero so the brand sits on one continuous field */
 header.nav{background:var(--royal-deep);position:sticky;top:env(safe-area-inset-top, 0px);z-index:20;border-bottom:1px solid rgba(255,255,255,.08)}
@@ -58,10 +71,13 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-block:20px}
 .brand{display:flex;align-items:center;gap:16px;text-decoration:none;color:#fff}
 .mono{width:54px;height:54px;flex:none;border:1px solid var(--gold);outline:1px solid rgba(200,160,74,.45);outline-offset:3px;display:grid;place-items:center;font:600 32px/1 var(--display);color:var(--gold)}
-.lockup{display:grid;gap:7px}
-.wordmark{font:600 28px/1 var(--display);letter-spacing:.26em;color:#fff;margin-right:-.26em;white-space:nowrap}
-.lockup .sub{display:flex;align-items:center;gap:10px;font:500 10.5px/1 var(--body);letter-spacing:.34em;text-transform:uppercase;color:var(--gold)}
-.lockup .sub::after{content:"";flex:1;height:1px;background:rgba(200,160,74,.6)}
+.logo{height:58px;width:auto;flex:none;display:block}
+footer .logo{height:50px}
+@media (max-width:560px){.logo{height:44px}}
+.lockup{display:inline-grid;gap:6px}
+.wordmark{font:700 30px/1 var(--sign);letter-spacing:.05em;color:#fff;white-space:nowrap;text-transform:uppercase}
+.lockup .sub{display:block;font:500 12.5px/1 var(--sign);letter-spacing:.14em;text-transform:uppercase;color:var(--gold);border-top:1.5px solid var(--gold);padding-top:6px}
+
 .nav ul{display:flex;gap:26px;list-style:none;margin:0;padding:0;white-space:nowrap}
 .nav .btn{white-space:nowrap}
 @media (max-width:1120px){.nav ul{display:none}}
@@ -145,6 +161,7 @@ h2.big{font-size:clamp(34px,4.4vw,52px);color:var(--royal-deep);margin:18px 0 22
 .textlink{color:var(--royal);font-weight:600;text-decoration:none;border-bottom:1px solid var(--gold)}
 @media (max-width:900px){.team{grid-template-columns:1fr}}
 @media (max-width:560px){.member{flex-direction:column;padding:28px 22px}}
+.after-grid{margin:28px 0 0;font-size:17px;font-style:italic;color:rgba(255,255,255,.8)}
 .contact{text-align:left}
 /* Dark sections */
 .dark{background:var(--royal-deep);color:#fff}
@@ -193,25 +210,32 @@ footer .legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.12);paddin
   .grid3{grid-template-columns:1fr}
   footer .wrap{grid-template-columns:1fr}
   .nav .btn{display:none}
-  .wordmark{font-size:21px;letter-spacing:.2em}
+  .wordmark{font-size:23px;letter-spacing:.04em}
   .mono{width:42px;height:42px;font-size:24px}
-  .lockup .sub{font-size:9px;letter-spacing:.24em}
+  .lockup .sub{font-size:10px;letter-spacing:.1em}
   .banner .rule{display:none}
   .banner p{letter-spacing:.12em;font-size:11px}
   .chat span.lbl{display:none}
   .chat{padding:13px}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+
+
+/* tie small caps labels to the sign lettering */
+.eyebrow,.btn,.nav ul a,.banner p,.consult dt,.c .k,.address .k,.member .role,footer h4{font-family:var(--sign)!important;font-weight:500!important}
+.eyebrow,.consult dt,.c .k,.address .k,footer h4{letter-spacing:.16em!important;font-size:12.5px!important}
+.btn{letter-spacing:.12em!important;font-size:14px!important}
+.nav ul a{letter-spacing:.1em!important;font-size:14px!important}
 </style>
 </head>
 <body>
 
 
-<div class="banner"><div class="wrap"><span class="rule" aria-hidden="true"></span><p><b>Opening January 2027</b> · 2524 Ellwood Drive SW <span class="sep">·</span> <a href="mailto:info@veydalaw.ca?subject=Joining%20Veyda%20Law">Lawyers: join our team</a></p><span class="rule r" aria-hidden="true"></span></div></div>
+<div class="banner"><div class="wrap"><span class="rule" aria-hidden="true"></span><div class="btext"><p><b>Opening January 2027</b> · 2524 Ellwood Drive SW</p><p class="bjoin"><a href="join.html">Lawyers: join our team</a></p></div><span class="rule r" aria-hidden="true"></span></div></div>
 
 <header class="nav">
   <div class="wrap">
-    <a class="brand" href="#top" aria-label="Veyda Law home"><span class="mono">V</span><span class="lockup"><span class="wordmark">VEYDA LAW</span><span class="sub">Barristers &amp; Solicitors</span></span></a>
+    <a class="brand" href="#top" aria-label="Veyda Law home"><img class="logo" src="vl-logo.svg" alt="" width="66" height="58"><span class="lockup"><span class="wordmark">VEYDA LAW</span><span class="sub">Advocate · Advise · Achieve</span></span></a>
     <nav aria-label="Main"><ul>
       <li><a href="#about">About</a></li>
       <li><a href="#practice">Practice Areas</a></li>
@@ -226,7 +250,6 @@ footer .legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.12);paddin
   <section class="hero" style="padding-block:0">
     <div class="wrap">
       <div>
-        <div class="eyebrow">Veyda Law · Edmonton, Alberta</div>
         <h1>Solving your problems <em>head-on.</em></h1>
         <p class="lede">Strategic representation across family, civil, real estate, estates, corporate and criminal matters. Proactive counsel that finds efficient, practical solutions before complexities escalate.</p>
         <div class="ctas">
@@ -265,12 +288,8 @@ footer .legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.12);paddin
 
   <section id="practice" class="dark">
     <div class="wrap">
-      <div class="areas-head">
-        <div>
-          <div class="eyebrow">Practice areas</div>
-          <h2 class="big" style="margin-bottom:0">Six areas. One clear path forward.</h2>
-        </div>
-        <p class="lead">Whatever you are facing, you get one lawyer who understands it fully, explains it plainly, and moves it forward.</p>
+      <div class="areas-head" style="margin-bottom:24px">
+        <div><div class="eyebrow">Practice areas</div></div>
       </div>
       <div class="grid3">
         <article class="area"><h3>Family Law</h3><p>Strategic, compassionate counsel through life's most personal transitions.</p>
@@ -286,17 +305,16 @@ footer .legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.12);paddin
         <article class="area"><h3>Criminal Defence</h3><p>Protecting your rights from the first call through to resolution.</p>
           <ul><li>Impaired driving and drug offences</li><li>Assault, theft and fraud</li><li>Youth matters</li></ul></article>
       </div>
+      <p class="after-grid">Not sure where your matter fits, or don&rsquo;t see it listed? Call us or book a free consultation and we&rsquo;ll talk it through.</p>
     </div>
   </section>
 
   <section id="team">
     <div class="wrap">
-      <div class="areas-head">
+      <div class="areas-head" style="margin-bottom:24px">
         <div>
           <div class="eyebrow">Our team</div>
-          <h2 class="big" style="margin-bottom:0">The people behind Veyda Law.</h2>
         </div>
-        <p class="lead">Practical, responsive lawyers who explain things plainly and move your matter forward.</p>
       </div>
       <div class="team">
         <article class="member">
@@ -330,8 +348,7 @@ footer .legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.12);paddin
   <section id="contact" class="contact dark">
     <div class="wrap">
       <div class="eyebrow">Get in touch</div>
-      <h2 class="big" style="margin-bottom:10px">Ready to talk to a lawyer?</h2>
-      <p class="lead">Your first consultation is free. Call, email, or start a chat. Your message goes straight to Tina.</p>
+      <p class="lead" style="margin-top:16px">Your first consultation is free. Call, email, or start a chat. Your message goes straight to Tina.</p>
       <div class="cards">
         <div class="c"><div class="k">Phone</div><div class="v">(825) 333-8462</div><p>Monday to Friday, 9:00 am to 4:30 pm</p></div>
         <div class="c"><div class="k">Email</div><div class="v">info@veydalaw.ca</div><p>We reply within one business day.</p></div>
@@ -344,11 +361,11 @@ footer .legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.12);paddin
 <footer>
   <div class="wrap">
     <div>
-      <a class="brand" href="#top"><span class="mono">V</span><span class="lockup"><span class="wordmark">VEYDA LAW</span><span class="sub">Barristers &amp; Solicitors</span></span></a>
+      <a class="brand" href="#top"><img class="logo" src="vl-logo.svg" alt="" width="66" height="58"><span class="lockup"><span class="wordmark">VEYDA LAW</span><span class="sub">Advocate · Advise · Achieve</span></span></a>
       <p style="max-width:28em;margin:18px 0 0">Strategic representation for the people and businesses of Alberta.</p>
     </div>
     <div><h4>Practice areas</h4><ul><li>Family Law</li><li>Civil Litigation</li><li>Real Estate</li><li>Wills &amp; Estates</li><li>Corporate &amp; Commercial</li><li>Criminal Defence</li></ul></div>
-    <div><h4>Contact</h4><ul><li>(825) 333-8462</li><li>info@veydalaw.ca</li><li>Southwest Edmonton, by appointment</li><li>New office: 2524 Ellwood Drive SW (January 2027)</li><li><a href="mailto:info@veydalaw.ca?subject=Joining%20Veyda%20Law" style="color:var(--gold-soft)">Lawyers: join our team</a></li></ul></div>
+    <div><h4>Contact</h4><ul><li>(825) 333-8462</li><li>info@veydalaw.ca</li><li>Southwest Edmonton, by appointment</li><li>New office: 2524 Ellwood Drive SW (January 2027)</li><li><a href="join.html" style="color:var(--gold-soft)">Lawyers: join our team</a></li></ul></div>
     <div class="legal">© 2026 Veyda Law. Information on this site is general and is not legal advice. Contacting Veyda Law does not create a lawyer-client relationship.</div>
   </div>
 </footer>
